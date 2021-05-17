@@ -1,0 +1,82 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bestselling Tour Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tour Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tour Operators</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+</div>
+<!--banner-->
+<div class="container pt-5">
+  <div class="row align-items-center justify-content-between">
+    <div class="col-12 col-md-4">
+      <p class="fs-2 fw-lighter m-0 p-0">Be Our</p>
+      <p class="fs-1 fw-lighter ">travel partner.</p>
+      <p>Build your business page, post travel packages,
+        promote tour, respond to quotes, generate leads
+        and enhance the customer experience
+        and satisfaction.</p>
+    </div>
+    <div class="col-12 col-md-7">
+      <div class="card px-5 py-3 bg-light">
+        <p class="fs-2 fw-lighter">Already member, Sign in now.</p>
+        <form class="py-3 px-4" (ngSubmit)="onSubmit()" #f="ngForm">
+          <div class="row">
+            <div class="col-4 text-end">User Name or Registered Email:</div>
+            <div class="col"><input type="text" ngModel name="email" #email="ngModel" class="form-control" required
+                email>
+              <p *ngIf="!email.valid&&email.touched">Please enter a valid value!</p>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-4 text-end">Password:</div>
+            <div class="col"><input type="password" ngModel name="password" #password="ngModel" class="form-control"
+                required>
+              <p *ngIf="!password.valid&&password.touched">Please enter a valid value!</p>
+              <p><small>By proceeding, you agree with Travitime Be Our Partner Terms of Service& Privacy Policy</small>
+              </p>
+            </div>
+          </div>
+          <div class="text-end w-100"> <button class="btn btn-primary" [disabled]="!f.valid" type="submit">Learn
+              More</button> <button class="btn btn-link">Forgot
+              Password?</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--section2-->
+<app-register></app-register>
+<!--section2-->

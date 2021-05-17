@@ -1,0 +1,11 @@
+<div class="container">
+  <div *ngFor="let tour of tours">
+    {{tour.tour_name}} , {{tour.from_date | date}}, <br>
+    <div *ngFor="let tourCo of tour.touringCountries ">
+      {{tourCo.countryCode}}
+    </div>
+    <button type="button" class="btn btn-danger" (click)="onDeleteTour(tour)">X</button>
+    <button type="button" class="btn btn-warning" (click)="onEditTour(tour)">X</button>
+    <hr>
+  </div>
+</div>

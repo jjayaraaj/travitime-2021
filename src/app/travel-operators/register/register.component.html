@@ -1,0 +1,134 @@
+<div class="container border p-5 my-5">
+  <div class="text-center">
+    <p class="fs-2">Don't have an TravitimeTM account yet?</p>
+    <p class="fs-4">Create your FREE account now</p>
+    <p>Sign up now and showcase your tour packages, respond to client enquires. Sign up for free.</p>
+  </div>
+
+  <div class="pt-5">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">User Name</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="username" class="form-control">
+        </div>
+      </div>
+
+
+
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Password</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="password" class="form-control">
+        </div>
+      </div>
+
+
+      <!-- <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Confirm Password</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" class="form-control">
+        </div>
+      </div> -->
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Name</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="name" class="form-control">
+        </div>
+      </div>
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Company Name</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="company" class="form-control">
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Address</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="address" class="form-control">
+        </div>
+      </div>
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Country</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="country" class="form-control">
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Phone Number</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="phone" class="form-control">
+        </div>
+      </div>
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Email ID</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="email" class="form-control">
+        </div>
+      </div>
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+          <label for="">Website</label>
+        </div>
+        <div class="col-12 col-md-4">
+          <input type="text" formControlName="website" class="form-control">
+        </div>
+      </div>
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              By proceeding, you agree with Travitime Be Our Partner Terms of Service& Privacy Policy
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center pb-3">
+        <div class="col-12 col-md-2 text-end">
+
+        </div>
+        <div class="col-12 col-md-4">
+          <button class="btn btn-primary ">Create Account</button>
+        </div>
+      </div>
+
+
+
+    </form>
+
+  </div>
+</div>

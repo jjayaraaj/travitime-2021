@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="w-25 m-auto py-5 " [formGroup]="tourForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Tour Name" formControlName="tour_name">
+    </div>
+    <div class="form-group">
+      <input type="date" class="form-control" placeholder="From Date" formControlName="from_date">
+    </div>
+    <div class="form-group">
+      <input type="date" class="form-control" placeholder="To Date" formControlName="to_date">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Country" formControlName="country">
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" formControlName="multicity_travel"
+        (change)="multiTravel = !multiTravel" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Multi travel
+      </label>
+
+    </div>
+    <div formArrayName="touringCountries" *ngIf="multiTravel">
+      <div><button class="btn btn-primary" type="button" (click)="onAddCountry()">Add Country</button></div>
+      <div class="form-group" *ngFor="let countryControl of touringCountrySelect().controls; let i = index">
+        <select class="form-control" [formControlName]="i">
+          <option *ngFor="let country of countries" [value]='country.name'>{{country.name}}</option>
+        </select>
+        <button class="btn" type="button" (click)="onDeleteCountryBox(i)">X</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Nature of travel" formControlName="nature_of_travel">
+    </div>
+
+    <button class="btn">submit</button>
+
+  </form>
+</div>
